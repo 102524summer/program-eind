@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Scott Concert & Album Bestellen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="merch.css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <div class="navbar">
+        <a href="login.html" class="login-button">Inloggen</a>
+    </div>
+
+    <div class="container">
+        <h1 class="glitch">Travis Scott: Liberté Orange Tour</h1>
+
+        <form id="orderForm" onsubmit="event.preventDefault(); calculatePrice();">
+            <div class="order-header">
+                <h2>Bestel je Concerttickets & "Liberté Orange" Album</h2>
+                <p>Beleef de Liberté Orange ervaring met Travis Scott</p>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" placeholder="Voer je naam in" required>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Adres</label>
+                <input type="text" id="address" name="address" placeholder="Voer je adres in" required>
+            </div>
+
+            <div class="order-options">
+                <div class="product-option">
+                    <label for="album">Liberté Orange Album - €15,99</label>
+                    <input type="checkbox" id="album" name="album" value="15.99">
+                </div>
+
+                <div class="product-option">
+                    <label for="tickets">Concerttickets - €50 per stuk</label>
+                    <input type="number" id="tickets" name="tickets" min="0" value="0" placeholder="Aantal tickets" required>
+                </div>
+            </div>
+
+            <button type="button" class="glitch-button" onclick="calculatePrice()">Plaats Bestelling</button>
+        </form>
+
+        <div id="orderSummary" class="hidden">
+            <h2>Bedankt voor je bestelling, <span id="orderName"></span></h2>
+            <p>Je bestelling wordt verwerkt!</p>
+            <div id="orderDetails"></div>
+            <div id="totalPrice"></div>
+            <button class="glitch-button" onclick="goBack()">Terug naar Bestelling</button>
+        </div>
+    </div>
+
+    <script src="merch.js"></script>
+</body>
+</html>

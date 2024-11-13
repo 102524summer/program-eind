@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+body, html {
+    font-family: 'Bebas Neue', sans-serif;
+    height: 100%;
+    color: #FFF;
+    background-color: #1A0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.navbar {
+    background-color: #6A1B1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar a, .login-button {
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    background: transparent;
+    border: 2px solid #FF5722;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar a:hover, .login-button:hover {
+    background: #FF5722;
+    color: #1B1B1B;
+    transform: scale(1.1);
+}
+
+.container {
+    text-align: center;
+    color: #FFF;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    position: relative;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1, h2, button {
+    animation: glitchEffect 0.2s infinite linear, colorShift 0.3s infinite linear;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #FF5722;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FF6347;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #FF5722;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 30px;
+    max-width: 380px;
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF5722;
+    margin-bottom: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #3d2c21;
+    color: #FFF;
+    border: 2px solid #FF5722;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center; /* Optional: Center text inside the input fields */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #FF5722;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-top: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.product-option {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.product-option label {
+    font-size: 1.2em;
+    color: #FF5722;
+}
+
+.product-option input[type="checkbox"],
+.product-option input[type="number"] {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #FF5722;
+    color: #1B1B1B;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    margin-top: 20px;
+    animation: glitchEffect 0.2s infinite linear, colorShift 0.3s infinite linear;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+button:hover {
+    background-color: #1B1B1B;
+    color: #FF5722;
+    transform: scale(1.05);
+}
+
+#orderSummary {
+    margin-top: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#orderSummary h2 {
+    color: #FF6347;
+}
+
+#totalPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5722;
+    margin-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#orderDetails {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glitchEffect {
+    0% {
+        transform: translate(0, 0);
+        text-shadow: 1px 0 red, -1px 0 blue, 0 1px green, 0 -1px yellow;
+    }
+    20% {
+        transform: translate(-2px, -1px);
+        text-shadow: -1px -1px red, 1px 1px blue, 0 2px green, 0 -2px yellow;
+    }
+    40% {
+        transform: translate(2px, 1px);
+        text-shadow: -1px -1px green, 1px 1px red, 0 2px yellow, 0 -2px blue;
+    }
+    60% {
+        transform: translate(-2px, -1px);
+        text-shadow: 1px 0 blue, -1px 0 red, 0 1px yellow, 0 -1px green;
+    }
+    80% {
+        transform: translate(2px, 1px);
+        text-shadow: -1px -1px yellow, 1px 1px green, 0 2px blue, 0 -2px red;
+    }
+    100% {
+        transform: translate(0, 0);
+        text-shadow: 1px 0 green, -1px 0 yellow, 0 1px red, 0 -1px blue;
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        color: #FF5722;
+    }
+    25% {
+        color: #FF6347;
+    }
+    50% {
+        color: #00FF00;
+    }
+    75% {
+        color: #1E90FF;
+    }
+    100% {
+        color: #FF5722;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .navbar {
+        font-size: 1em;
+    }
+}
